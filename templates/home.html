@@ -1,0 +1,87 @@
+{% extends 'layout.html' %}
+{% block head %}
+<title>Nama Perusahaan</title>
+{% endblock %}
+{% block body %}
+<style>
+  .header_top{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .container{
+    padding-top: 0px;
+    padding-bottom: 10px;
+  }
+  .info{
+    padding-left: 0px;
+  }
+  .nav li {
+    position: center;
+    margin-right: 15px; /* Sesuaikan angka ini sesuai kebutuhan Anda */
+    display: inline; /* Menjadikan elemen dalam satu baris */
+  }
+  .beranda{
+    text-align: center;
+  }
+  .nav p {
+    padding-right: 15px;
+    margin: 0; /* Menghilangkan margin dari elemen <p> */
+    display: inline; /* Menjadikan elemen dalam satu baris */
+  }
+</style>
+<header>
+  <div class="main-content" href="home.html"></div>
+  <div class="header_top">
+    <h2 class="text-center">Nama Perusahaan</h2> 
+</header>
+<section class="info">
+  <div class="container">
+    <div class="row">
+      <hr>
+      <ul class="nav">
+        <li class="beranda">
+          <a style="color: black;" href="home"><u>Beranda</u></a>
+        </li>
+        <li class="produk">
+          <a style="color: black;" href="album"><p>|</p><u>Produk</u></a>
+        </li>
+        <li class="Kontak">
+          <a style="color: black;" href="merch"><p>|</p><u>Kontak</u></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <hr>
+</section>
+  <section class="capt">
+    <div class="container">
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+        but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="img-box">
+            <img src="https://pbs.twimg.com/media/GCpBbUBaAAAZJ-b?format=jpg&name=small" width="80%" height="80%" alt="">
+          </div>
+        </div>
+        <div class="col ">
+          <div class="detail-box">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+              when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+              It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+              and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="text-center">
+      <hr>
+      <p>&copy; 2021 Nama Perusahaan. All rights reserved.</p>
+      <hr>
+  </footer>
+{% endblock %}
