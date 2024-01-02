@@ -1,23 +1,24 @@
 {% extends 'layout.html' %}
 {% block head %}
-<title>Nama Perusahaan</title>
 {% endblock %}
 {% block body %}
 <style>
   .header_top{
     padding-top: 60px;
     padding-bottom: 60px;
+    text-align: center;
   }
   .container{
     padding-top: 0px;
     padding-bottom: 10px;
   }
   .info{
-    padding-left: 0px;
+      padding-left: 0px;
+      text-align: center;
   }
   .nav li {
-    position: center;
-    margin-right: 15px; /* Sesuaikan angka ini sesuai kebutuhan Anda */
+    justify-content: center;
+    margin-right: 15px; /* Sesuaikan angka ini sesuai kebutuhan */
     display: inline; /* Menjadikan elemen dalam satu baris */
   }
   .beranda{
@@ -27,6 +28,9 @@
     padding-right: 15px;
     margin: 0; /* Menghilangkan margin dari elemen <p> */
     display: inline; /* Menjadikan elemen dalam satu baris */
+  }
+  .footer{
+    text-align: center;
   }
 </style>
 <header>
@@ -38,20 +42,20 @@
   <div class="container">
     <div class="row">
       <hr>
-      <ul class="nav">
-        <li class="beranda">
-          <a style="color: black;" href="home"><u>Beranda</u></a>
-        </li>
-        <li class="produk">
-          <a style="color: black;" href="album"><p>|</p><u>Produk</u></a>
-        </li>
-        <li class="Kontak">
-          <a style="color: black;" href="merch"><p>|</p><u>Kontak</u></a>
-        </li>
-      </ul>
+        <ul class="nav">
+          <li class="beranda">
+            <a style="color: black;" aria-current="page"><u>Beranda</u></a>
+          </li>
+          <li class="produk">
+            <a style="color: black;" href="produk"><p>|</p><u>Produk</u></a>
+          </li>
+          <li class="Kontak">
+            <a style="color: black;" href="kontak"><p>|</p><u>Kontak</u></a>
+          </li>
+        </ul>
+        <hr>
     </div>
   </div>
-  <hr>
 </section>
   <section class="capt">
     <div class="container">
@@ -79,9 +83,9 @@
         </div>
       </div>
     </div>
-    <footer class="text-center">
+    <footer class="footer">
       <hr>
       <p>&copy; 2021 Nama Perusahaan. All rights reserved.</p>
       <hr>
-  </footer>
+    </footer>
 {% endblock %}
