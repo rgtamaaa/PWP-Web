@@ -64,21 +64,18 @@ def dashboard():
         return render_template('dashboard.html', users=data)
     else:
         return redirect(url_for('login'))
-
-# @app.route('/home')
-# def home():
-#     if 'is_logged_in' in session:
-#         cur = mysql.connection.cursor()
-#         cur.execute("SELECT * FROM users")
-#         data = cur.fetchall()
-#         cur.close()
-#         return render_template('home.html', users=data)
-#     else:
-#         return redirect(url_for('login'))
     
 @app.route('/produk')
-def album():
+def produk():
     return render_template('produk.html')
+
+@app.route('/home')
+def home():
+    return render_template('home.html')
+
+@app.route('/kontak')
+def kontak():
+    return render_template('kontak.html')
 
 @app.route('/logout')
 def logout():
