@@ -1,0 +1,83 @@
+{% extends 'layout.html' %}
+{% block head %}
+{% endblock %}
+
+{% block body %}
+  <style>
+    body, html {
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      background-color: #576CBC;
+    }
+    .detil {
+      padding-top: 100px;
+    }
+  </style>
+
+  <body id="page-top">
+    <nav class="navbar navbar-expand-lg text-uppercase fixed-top" style="background-color: #2D3250;" id="mainNav">
+      <div class="container">
+        <img src="https://pbs.twimg.com/media/GC5hurGaoAA_n3f?format=png&name=240x240" width="110px">
+        <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse text-end" id="navbarResponsive">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" style="color: white;" aria-current="page" href="home">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: white;" href="kelas">Kursus</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: white;" href="langganan">Berlangganan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: white;" href="kontak">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Detail Paket Section -->
+    <div class="container">
+      <br>
+      <h2 class="detil text-center">Detail Paket</h2>
+      <br>
+      <table class="table table-striped" widht="100%">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Pilihan Paket</th>
+            <th>Durasi</th>
+            <th>Harga</th>
+            <br>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in detail %}
+          <tr>
+              <td>{{ loop.index }}</td>
+              <td>{{ row[1] }}</td>
+              <td>{{ row[2] }}</td>
+              <td>{{ row[3] }}</td>
+              <td>{{ row[4] }}</td>
+              <td>{{ row[5] }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="mt-5 py-5 text-center">
+      <hr>
+      <p>&copy; 2024 LearnCodePro. All rights reserved.</p>
+      <hr>
+    </footer>
+  </body>
+{% endblock %}

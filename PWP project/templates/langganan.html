@@ -1,0 +1,233 @@
+{% extends 'layout.html' %}
+{% block head %}
+{% endblock %}
+{% block body %}
+<style>
+  body, html {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background-color: #576CBC; /* Set the desired background color */
+  }
+
+  .header_top {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+  }
+
+  .container {
+    padding-top: 0px;
+    padding-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .info {
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  /* Navbar font color */
+  .navbar-nav .nav-link {
+      color: #fff; /* Set the color to white */
+  }
+
+  /* Navbar toggler text color */
+  .navbar-toggler {
+      color: #fff; /* Set the color to white */
+  }
+
+  /* Navbar brand text color */
+  .navbar-brand {
+      color: #fff; /* Set the color to white */
+  }
+
+  /* Navbar brand text color on hover */
+  .navbar-brand:hover {
+      color: #fff; /* Set the color to white */
+  }
+
+  .nav li {
+    justify-content: center;
+    margin-right: 15px;
+    display: inline;
+  }
+
+  .beranda {
+    text-align: center;
+  }
+
+  .nav p {
+    padding-right: 15px;
+    margin: 0;
+    display: inline;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  .masthead {
+    background-color: #576CBC; /* Set the desired background color */
+    color: #fff; /* Set the desired text color */
+  }
+  #featured {
+    color: #fff; /* Set the text color to white */
+  }
+  .kelas .btn-primary {
+    margin-bottom: 20px; /* You can adjust the value to increase or decrease the space */
+  }
+  .small-img-group{
+    display: flex;
+    justify-content: space-between;
+  }
+  .small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+    padding: 2px;
+  }
+</style>
+<header>
+  <body id="page-top">
+    <!-- Navigation-->
+    <div class="main-content" href="langganan.html"></div>
+    <nav class="navbar navbar-expand-lg text-uppercase fixed-top" style="background-color: #2D3250;" id="mainNav">
+        <div class="container">
+            <img src="https://pbs.twimg.com/media/GC5hurGaoAA_n3f?format=png&name=240x240" width="110px">
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse text-end" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link active" style="color: white;" aria-current="page" href="home">Beranda</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" style="color: white;" href="kelas">Kursus</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" style="color: white;" href="langganan">Berlangganan</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" style="color: white;" href="kontak">Kontak</a>
+                  </li>
+              </ul>
+            </div>          
+        </div>
+    </nav>
+    <section class="container langganan-paket my-5 pt-5">
+        <div class="row mt-5">
+            <div class="col-lg-5 col-md6 col-sm-12">
+                <img class="img-fluid w-100 pb-1" src="https://pbs.twimg.com/media/GC5X6ZOaQAAYJQS?format=png&name=small" id="main-img"/>
+                <div class="small-img-group">
+                    <div class="small-img-col">
+                        <img src="https://pbs.twimg.com/media/GC5X4l6b0AAh31j?format=png&name=small" width="100%" class="small-img"/>
+                    </div>
+                    <div class="small-img-col">
+                        <img src="https://pbs.twimg.com/media/GC5X1K-aYAAqQGa?format=png&name=small" width="100%" class="small-img"/>
+                    </div>
+                    <div class="small-img-col">
+                        <img src="https://pbs.twimg.com/media/GC5X3AVaAAAUtyD?format=png&name=small" width="100%" class="small-img"/>
+                    </div>
+                    <div class="small-img-col">
+                        <img src="https://pbs.twimg.com/media/GC5YBeHbgAA7PpL?format=png&name=small" width="100%" class="small-img"/>
+                    </div>
+                    <div class="small-img-col">
+                        <img src="https://pbs.twimg.com/media/GC5X_P2agAAGAEg?format=png&name=small" width="100%" class="small-img"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <h6><b>Paket Kelas</b></h6>
+                <h3 class="py-2">LCP Learn Python</h3>
+                <h2>Rp.550.000</h2>
+                <div class="card-body">
+                    <form action="{{url_for('langganan') }}" method="post">
+                        <div class="msg">{{ msg }}</div>
+                            <div class="mb-3">
+                                <label class="form-label">Nama</label>
+                                <input id="nama" name="nama" type="text" placeholder="Masukkan nama kamu" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Pilihan Paket</label>
+                                <input id="jenis_paket" name="jenis_paket" type="tex" placeholder="Masukkan jenis paket belajar" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Durasi</label>
+                                <input id="durasi" name="durasi" type="text" placeholder="Masukkan durasi paket belajar" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Harga</label>
+                                <input id="harga" name="harga" type="text" placeholder="Masukkan harga paket belajar"  class="form-control">
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary mt-2">Beli Paket</button>
+                            </div>
+                    </form>
+                    <script>
+                        var registration_success_alert = "{{ msg2 }}";
+                        if (registration_success_alert) {
+                            alert(registration_success_alert);
+                        }
+                    </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+      var mainImg = document.getElementById("main-img");
+      var smallImg = document.getElementsByClassName("small-img"); 
+      
+      for(let i=0; i<5; i++){
+                    smallImg[i].onclick = function(){
+                    mainImg.src = smallImg[i].src;
+                  }
+
+      }
+      
+
+    </script>
+    <script>
+      var mainImg = document.getElementById("main-img");
+      var smallImg = document.getElementsByClassName("small-img");
+      var paketTitle = document.querySelector(".langganan-paket h3");
+      var paketPrice = document.querySelector(".langganan-paket h2");
+    
+      for (let i = 0; i < 5; i++) {
+        smallImg[i].onclick = function () {
+          mainImg.src = smallImg[i].src;
+    
+          // Ganti teks "Paket Kelas", judul, dan harga sesuai dengan gambar yang diklik
+          switch (i) {
+            case 0:
+              paketTitle.innerText = "LCP Basic PHP Programming (Beginners)";
+              paketPrice.innerText = "Rp.1.135.000";
+              break;
+            case 1:
+              paketTitle.innerText = "LCP Basic CSS & HTML programming";
+              paketPrice.innerText = "Rp.700.000";
+              break;
+            case 2:
+              paketTitle.innerText = "LCP Basic Java Programming";
+              paketPrice.innerText = "Rp.2.100.000";
+              break;
+            case 3:
+              paketTitle.innerText = "LCP Basic SQL Programming";
+              paketPrice.innerText = "Rp.550.000";
+              break;
+            case 4:
+              paketTitle.innerText = "LCP Basic Ruby Programming";
+              paketPrice.innerText = "Rp.500.000";
+              break;
+          }
+        };
+      }
+    </script>
+    <footer class="mt-5 py-5 text-center">
+        <hr>
+          <p>&copy; 2024 LearnCodePro. All rights reserved.</p>
+        <hr>
+      </footer>
+{% endblock %}

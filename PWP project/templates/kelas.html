@@ -1,0 +1,203 @@
+{% extends 'layout.html' %}
+{% block head %}
+{% endblock %}
+{% block body %}
+<style>
+  body, html {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background-color: #576CBC; /* Set the desired background color */
+  }
+
+  .header_top {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+  }
+
+  .container {
+    padding-top: 0px;
+    padding-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .info {
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  /* Navbar font color */
+  .navbar-nav .nav-link {
+      color: #fff; /* Set the color to white */
+  }
+
+  /* Navbar toggler text color */
+  .navbar-toggler {
+      color: #fff; /* Set the color to white */
+  }
+
+  /* Navbar brand text color */
+  .navbar-brand {
+      color: #fff; /* Set the color to white */
+  }
+
+  /* Navbar brand text color on hover */
+  .navbar-brand:hover {
+      color: #fff; /* Set the color to white */
+  }
+
+  .nav li {
+    justify-content: center;
+    margin-right: 15px;
+    display: inline;
+  }
+
+  .beranda {
+    text-align: center;
+  }
+
+  .nav p {
+    padding-right: 15px;
+    margin: 0;
+    display: inline;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  .masthead {
+    background-color: #576CBC; /* Set the desired background color */
+    color: #fff; /* Set the desired text color */
+  }
+  #featured {
+    color: #fff; /* Set the text color to white */
+  }
+  .kelas .btn-primary {
+    margin-bottom: 20px; /* You can adjust the value to increase or decrease the space */
+  }
+
+</style>
+<header>
+  <body id="page-top">
+    <!-- Navigation-->
+    <div class="main-content" href="kelas.html"></div>
+    <nav class="navbar navbar-expand-lg text-uppercase fixed-top" style="background-color: #2D3250;" id="mainNav">
+        <div class="container">
+            <img src="https://pbs.twimg.com/media/GC5hurGaoAA_n3f?format=png&name=240x240" width="110px">
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse text-end" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link active" style="color: white;" aria-current="page" href="home">Beranda</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" style="color: white;" href="kelas">Kursus</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" style="color: white;" href="langganan">Berlangganan</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" style="color: white;" href="kontak">Kontak</a>
+                  </li>
+              </ul>
+            </div>          
+        </div>
+    </nav>
+  <section id="featured" class="my-5 pb5">
+    <div class="container text-center mt-5 py-5">
+        <h3><b>Daftar Kelas</b></h3>
+        <hr>
+        <p>Disini kamu bisa pilih paket belajar</p>
+    </div>
+    <div class="row mx-auto container-fluid">
+        <div class="kelas text-center col-md-4 col-sm-12">
+            <img class="img-fluid mb-3" src="https://pbs.twimg.com/media/GC5X6ZOaQAAYJQS?format=png&name=small"/>
+            <div class="star mt-4 mb-4">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <h5 class="p-name">LCP Basic Python Programming (Beginners)</h5>
+            <p class="p-price">Rp.1.100.000/6 bulan</p>
+            <a class="btn btn-primary" href="langganan">Beli Paket</a>
+        </div>
+        <div class="kelas text-center col-md-4 col-sm-12">
+            <img class="img-fluid mb-3" src="https://pbs.twimg.com/media/GC5X4l6b0AAh31j?format=png&name=small"/>
+            <div class="star mt-4 mb-4">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <h5 class="p-name">LCP Basic PHP Programming (Beginners)</h5>
+            <p class="p-price">Rp.1.135.000/6 bulan</p>
+            <a class="btn btn-primary" href="langganan">Beli Paket</a>
+        </div>
+        <div class="kelas text-center col-md-4 col-sm-12">
+            <img class="img-fluid mb-3" src="https://pbs.twimg.com/media/GC5X1K-aYAAqQGa?format=png&name=small"/>
+            <div class="star mt-4 mb-4">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <h5 class="p-name">LCP Basic CSS & HTML programming</h5>
+            <p class="p-price">Rp.700.000/6 bulan</p>
+            <a class="btn btn-primary" href="langganan">Beli Paket</a>
+        </div>
+        <div class="kelas text-center col-md-4 col-sm-12">
+            <img class="img-fluid mb-3" src="https://pbs.twimg.com/media/GC5X3AVaAAAUtyD?format=png&name=small"/>
+            <div class="star mt-4 mb-4">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <h5 class="p-name">LCP Basic Java Programming</h5>
+            <p class="p-price">Rp.2.100.000/6 bulan</p>
+            <a class="btn btn-primary" href="langganan">Beli Paket</a>
+        </div>
+        <div class="kelas text-center col-md-4 col-sm-12">
+            <img class="img-fluid mb-3" src="https://pbs.twimg.com/media/GC5YBeHbgAA7PpL?format=png&name=small"/>
+            <div class="star mt-4 mb-4">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <h5 class="p-name">LCP Basic SQL Programming</h5>
+            <p class="p-price">Rp.550.000/6 bulan</p>
+            <a class="btn btn-primary" href="langganan">Beli Paket</a>
+        </div>
+        <div class="kelas text-center col-md-4 col-sm-12">
+            <img class="img-fluid mb-3" src="https://pbs.twimg.com/media/GC5X_P2agAAGAEg?format=png&name=small"/>
+            <div class="star mt-4 mb-4">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <h5 class="p-name">LCP Basic Ruby Programming</h5>
+            <p class="p-price">Rp.500.000/6 bulan</p>
+            <a class="btn btn-primary" href="langganan">Beli Paket</a>
+        </div>
+    </div>
+  </section>
+  <footer class="mt-5 py-5 text-center">
+    <hr>
+      <p>&copy; 2024 LearnCodePro. All rights reserved.</p>
+    <hr>
+  </footer>
+{% endblock %}

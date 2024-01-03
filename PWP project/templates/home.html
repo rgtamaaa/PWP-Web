@@ -1,0 +1,137 @@
+{% extends 'layout.html' %}
+{% block head %}
+{% endblock %}
+{% block body %}
+<style>
+  body, html {
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #576CBC; /* Set the desired background color */
+  }
+
+  .header_top {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+  }
+
+  .container {
+    padding-top: 0px;
+    padding-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .info {
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  /* Navbar font color */
+  .navbar-nav .nav-link {
+      color: #fff; /* Set the color to white */
+  }
+
+  /* Navbar toggler text color */
+  .navbar-toggler {
+      color: #fff; /* Set the color to white */
+  }
+
+  /* Navbar brand text color */
+  .navbar-brand {
+      color: #fff; /* Set the color to white */
+  }
+
+  /* Navbar brand text color on hover */
+  .navbar-brand:hover {
+      color: #fff; /* Set the color to white */
+  }
+
+  .nav li {
+    justify-content: center;
+    margin-right: 15px;
+    display: inline;
+  }
+
+  .beranda {
+    text-align: center;
+  }
+
+  .nav p {
+    padding-right: 15px;
+    margin: 0;
+    display: inline;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  .masthead {
+    background-color: #576CBC; /* Set the desired background color */
+    color: #fff; /* Set the desired text color */
+  }
+  #featured {
+    color: #fff; /* Set the text color to white */
+  }
+  .kelas .btn-primary {
+    margin-bottom: 20px; /* You can adjust the value to increase or decrease the space */
+  }
+
+</style>
+<header>
+  <body id="page-top">
+    <!-- Navigation-->
+    <div class="main-content" href="kelas.html"></div>
+    <nav class="navbar navbar-expand-lg text-uppercase fixed-top" style="background-color: #2D3250;" id="mainNav">
+        <div class="container">
+            <img src="https://pbs.twimg.com/media/GC5hurGaoAA_n3f?format=png&name=240x240" width="110px">
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse text-end" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link active" style="color: white;" aria-current="page" href="home">Beranda</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" style="color: white;" href="kelas">Kursus</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" style="color: white;" href="langganan">Berlangganan</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" style="color: white;" href="kontak">Kontak</a>
+                  </li>
+              </ul>
+            </div>          
+        </div>
+    </nav>
+  <div class="main-content" href="home.html"></div>
+  <div class="header_top">
+</header>
+<header class="masthead text-white text-center"id="home">
+  <div class="container d-flex align-items-center flex-column">
+      <!-- Masthead Avatar Image-->
+      <img class="masthead-avatar mb-5" src="https://pbs.twimg.com/media/GC5hs-xaYAAhGR9?format=png&name=small" width="200px" alt="..." />
+      <!-- Masthead Heading-->
+      <h1 class="masthead-heading text-uppercase mb-0"><b>Learn Code Pro</b></h1>
+      <!-- Icon Divider-->
+      <div class="divider-custom divider-light">
+          <div class="divider-custom-line"></div>
+          <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+          <div class="divider-custom-line"></div>
+      </div>
+      <!-- Masthead Subheading-->
+      <p class="masthead-subheading font-weight-light mb-0">Online Coding Courses and Programs</p>
+      <p>#WaktunyaTambahSkillDiLCP</p>
+  </div>
+</header>
+  <footer class="mt-5 py-5 text-center">
+    <hr>
+      <p>&copy; 2024 LearnCodePro. All rights reserved.</p>
+    <hr>
+  </footer>
+{% endblock %}
