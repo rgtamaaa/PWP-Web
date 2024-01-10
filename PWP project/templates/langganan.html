@@ -151,15 +151,31 @@
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Pilihan Paket</label>
-                                <input id="jenis_paket" name="jenis_paket" type="tex" placeholder="Masukkan jenis paket belajar" class="form-control">
+                                <select name="course" id="course" class="form-control">
+                                  <option value="" disabled selected>Pilih jenis paket</option>
+                                  <option value="LCP Learn Python">LCP Learn Python</option>
+                                  <option value="LCP Basic PHP Programming (Beginners)">LCP Basic PHP Programming (Beginners)</option>
+                                  <option value="LCP Basic CSS & HTML programming">LCP Basic CSS & HTML programming</option>
+                                  <option value="LCP Basic Java Programming">LCP Basic Java Programming</option>
+                                  <option value="LCP Basic SQL Programming">LCP Basic SQL Programming</option>
+                                  <option value="LCP Basic Ruby Programming">LCP Basic Ruby Programming</option>
+                                </select>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label">Durasi</label>
-                                <input id="durasi" name="durasi" type="text" placeholder="Masukkan durasi paket belajar" class="form-control">
+                                <label class="form-label">Alamat</label>
+                                <input id="alamat" name="alamat" type="text" placeholder="Masukkan alamat" class="form-control">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Harga</label>
-                                <input id="harga" name="harga" type="text" placeholder="Masukkan harga paket belajar"  class="form-control">
+                                <select name="harga" id="harga" class="form-control">
+                                  <option value="" disabled selected>Pilih jenis harga</option>
+                                  <option value="550000">Rp.550.000</option>
+                                  <option value="1135000">Rp.1.135.000</option>
+                                  <option value="700000">Rp.700.000</option>
+                                  <option value="2100000">Rp.2.100.000</option>
+                                  <option value="550000">Rp.550.000</option>
+                                  <option value="550000">Rp.550.000</option>
+                                </select>
                             </div>
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-primary mt-2">Beli Paket</button>
