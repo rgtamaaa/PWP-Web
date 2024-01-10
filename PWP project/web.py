@@ -76,11 +76,11 @@ def langganan():
     msg2 = ''
     if request.method == 'POST':
         name = request.form['nama']
-        paket = request.form['jenis_paket']
-        durasi = request.form['durasi']
+        course = request.form['course']
+        alamat = request.form['alamat']
         harga = request.form['harga']
         cur = mysql.connection.cursor()
-        cur.execute('INSERT INTO beli_paket (nama, jenis_paket, durasi, harga) VALUES (%s, %s, %s, %s)', (name, paket, durasi, harga))
+        cur.execute('INSERT INTO beli_paket (nama, course, alamat, harga) VALUES (%s, %s, %s, %s)', (name, course, alamat, harga))
         mysql.connection.commit()
         msg2 = 'Pembelian Berhasil!'
         return redirect(url_for('detail'))
